@@ -17,9 +17,14 @@ namespace _1912901046_VizeOdevi
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Veriler Güncelleniyor...")
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
