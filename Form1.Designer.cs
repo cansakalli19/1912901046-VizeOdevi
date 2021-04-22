@@ -206,6 +206,7 @@ namespace _1912901046_VizeOdevi
             this.button1.TabIndex = 17;
             this.button1.Text = "VERİLERİ GÜNCELLE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
