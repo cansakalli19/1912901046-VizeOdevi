@@ -14,7 +14,7 @@ namespace _1912901046_VizeOdevi
 {
     public partial class Form1 : Form
     {
-        string havadurumulink = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
+        string xmllink = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
     
         public Form1()
         {
@@ -26,7 +26,21 @@ namespace _1912901046_VizeOdevi
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            XmlDocument veriler = new XmlDocument();
+            veriler.Load(xmllink);
+            XmlElement root = veriler.DocumentElement;
+            XmlNodeList nodes = root.SelectNodes("sehirler");
 
+
+           
+
+            }
+
+        }
+
+       
     }
         
     
