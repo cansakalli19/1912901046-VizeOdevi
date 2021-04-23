@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace _1912901046_VizeOdevi
 {
     public partial class Form1 : Form
     {
+        string havadurumulink = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
+    
         public Form1()
         {
             InitializeComponent();
@@ -23,16 +26,8 @@ namespace _1912901046_VizeOdevi
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
     }
+        
+    
 }
