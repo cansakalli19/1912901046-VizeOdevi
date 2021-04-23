@@ -34,13 +34,29 @@ namespace _1912901046_VizeOdevi
             XmlNodeList nodes = root.SelectNodes("sehirler");
 
 
-           
+            foreach (XmlNode node in nodes)
+            {
+                string bolge = node["Bolge"].InnerText;
+                string ili= node["ili"].InnerText;
+                string durum= node["Durum"].InnerText;
+                string maksimumsicaklik= node["Mak"].InnerText;
+
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                row.Cells[0].Value = bolge;
+                row.Cells[1].Value = ili;
+                row.Cells[2].Value = maksimumsicaklik;
+                row.Cells[3].Value = durum;
+                dataGridView1.Rows.Add(row);
 
             }
 
         }
 
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+        }
     }
         
     
