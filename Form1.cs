@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
+using System.Net;
 
 
 namespace _1912901046_VizeOdevi
@@ -25,7 +26,8 @@ namespace _1912901046_VizeOdevi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timer1.Interval = 1;
+            timer1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace _1912901046_VizeOdevi
                 row.Cells[3].Value = durum;
                 dataGridView1.Rows.Add(row);
 
+               
             }
 
         }
@@ -58,6 +61,16 @@ namespace _1912901046_VizeOdevi
         {
             
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
         }
     }
         
