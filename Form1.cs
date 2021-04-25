@@ -18,7 +18,8 @@ namespace _1912901046_VizeOdevi
     public partial class Form1 : Form
     {
         string xmllink = "https://www.mgm.gov.tr/FTPDATA/analiz/sonSOA.xml";
-    
+
+      
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,9 @@ namespace _1912901046_VizeOdevi
         {
             timer1.Interval = 1;
             timer1.Enabled = true;
+           
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -52,10 +55,28 @@ namespace _1912901046_VizeOdevi
                 row.Cells[3].Value = durum;
                 dataGridView1.Rows.Add(row);
 
-               
+           
+
             }
 
         }
+
+        void textyaz(String veriler)
+        {
+
+            string dosya_yolu = @"D:\MAKÜ\NTP\1912901046 - VizeOdevi\bin\Debug\veri.txt";
+            string[] satirler = System.IO.File.ReadAllLines(dosya_yolu, Encoding.GetEncoding("windows-1254"));
+            foreach (string c in satirler)
+            {
+                Console.WriteLine(c);
+            }
+            Console.ReadKey();
+
+
+        }
+
+
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
